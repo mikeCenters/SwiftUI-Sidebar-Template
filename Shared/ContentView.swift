@@ -7,15 +7,35 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Detail View")
+    }
+}
+
+
+
+struct ContentView: View {
+    
+    var body: some View {
+        NavigationView {
+            SidebarView()
+            
+            MainView()
+            
+            DetailView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            
+            ContentView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
