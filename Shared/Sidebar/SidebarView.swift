@@ -10,17 +10,24 @@ import SwiftUI
 struct SidebarView: View {
     
     var body: some View {
-        Text("Sidebar View")
+        ScrollView {
+            Text("Sidebar View")
+            
+        }
     }
 }
 
 struct SidebarView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SidebarView()
+            NavigationView {
+                SidebarView()
+            }
             
-            SidebarView()
-                .environment(\.colorScheme, .dark)
+            NavigationView {
+                SidebarView()
+                    .environment(\.colorScheme, .dark)
+            }
         }
     }
 }

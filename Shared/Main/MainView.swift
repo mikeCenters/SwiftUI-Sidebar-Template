@@ -17,10 +17,14 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainView()
+            NavigationView {
+                MainView()
+            }
             
-            MainView()
-                .environment(\.colorScheme, .dark)
+            NavigationView {
+                MainView()
+                    .environment(\.colorScheme, .dark)
+            }
         }
     }
 }
