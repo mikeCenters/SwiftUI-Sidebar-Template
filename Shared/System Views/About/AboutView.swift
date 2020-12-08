@@ -1,23 +1,23 @@
 //
-//  MainView.swift
+//  AboutView.swift
 //  SwiftUI Sidebar Template (iOS)
 //
-//  Created by Mike Centers on 12/7/20.
+//  Created by Mike Centers on 12/8/20.
 //
 
 import SwiftUI
 
-struct MainView: View {
+struct AboutView: View {
     
     var body: some View {
-        Text("Main View")
+        Text("About View")
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MainView()
+            AboutView()
         }
     }
 }

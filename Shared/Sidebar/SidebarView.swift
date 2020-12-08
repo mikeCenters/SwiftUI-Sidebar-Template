@@ -7,80 +7,88 @@
 
 import SwiftUI
 
+/**
+ Sidebar for iOS
+ */
 struct SidebarView: View {
-    var isTapped: Bool = false
+    
+    var appTitle: String = "App Title"
     
     var body: some View {
-        VStack {
-            ScrollView {
-                Text("Header Section")
-                
-                Text("Some body")
-                
-                
+        VStack(spacing: 0) {
+            /*
+             Main Nav Links
+             */
+            ScrollView(.vertical, showsIndicators: false) {
+                Group {
+                    NavigationLink(destination: MainView()) {
+                        Label("Message", systemImage: "message")
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: MainView()) {
+                        Label("Weather", systemImage: "cloud.sun")
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: MainView()) {
+                        Label("Charge", systemImage: "bolt.car")
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: MainView()) {
+                        Label("HealthCare", systemImage: "pills")
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: MainView()) {
+                        Label("Ticket", systemImage: "ticket")
+                    }
+                    .padding()
+                    
+                    NavigationLink(destination: MainView()) {
+                        Label("Calculator", systemImage: "function")
+                    }
+                    .padding()
+                }
+                .foregroundColor(.primary)
+                .font(Font.title3.weight(.semibold))
             }
-            .background(Color.green)
-            
             
             
             /*
-             Footer Section
+             Footer Nav Links
              */
-            
-            //MARK: FixMe:
-            // - Icon should be center aligned.
-            // - Text should be leading aligned.
-            VStack(spacing: 15) {
+            VStack(spacing: 25) {
                 Divider()
-                
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .center, spacing: 20) {
                     
-                    NavigationLink(
-                        destination: Text("About View"),
-                        label: {
-                            Label("About", systemImage: "info.circle")
-                                .font(Font.title3.weight(.bold))
-                        }
-                    )
+                    NavigationLink(destination: AboutView()) {
+                        Label("About", systemImage: "info.circle")
+                    }
                     
+                    NavigationLink(destination: SettingsView()) {
+                        Label("Settings", systemImage: "gear")
+                    }
                     
-                    NavigationLink(
-                        destination: Text("Contact View"),
-                        label: {
-                            Label("Contact", systemImage: "envelope")
-                                .font(Font.title3.weight(.bold))
-                        }
-                    )
-                    
-                    
-                    NavigationLink(
-                        destination: Text("Destination 3"),
-                        label: {
-                            Label("Link 3", systemImage: "photo")
-                                .font(Font.title3.weight(.bold))
-                        }
-                    )
+                    NavigationLink(destination: ContactUsView()) {
+                        Label("Contact Us", systemImage: "envelope")
+                    }
                 }
-                .foregroundColor(.secondary)
             }
-            .padding(.bottom, 20)
+            .foregroundColor(.secondary)
+            .font(.headline)
+            .padding(.bottom)
             
-            
-        }.navigationBarTitle("Sidebar Title")
+        }
+        .navigationBarTitle(self.appTitle, displayMode: .large)
     }
 }
 
 struct SidebarView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            NavigationView {
-                SidebarView()
-            }
-            
-            NavigationView {
-                SidebarView()
-                    .environment(\.colorScheme, .dark)
-            }
+        NavigationView {
+            SidebarView()
         }
     }
 }

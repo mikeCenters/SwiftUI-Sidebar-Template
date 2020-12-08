@@ -11,7 +11,22 @@ import SwiftUI
 struct SwiftUI_Sidebar_TemplateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                SidebarView()
+                
+                MainView()
+                
+            }
+        }
+    }
+}
+
+struct Main_App_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            SidebarView()
+            
+            MainView()
         }
     }
 }
