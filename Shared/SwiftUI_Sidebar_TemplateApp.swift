@@ -16,11 +16,16 @@ struct SwiftUI_Sidebar_TemplateApp: App {
                 
                 MainView()
                 
+                // Uncomment for three tier navigation view (iPadOS, macOS)
+//                Text("Detail View")
             }
         }
     }
 }
 
+/*
+ Provide the structure of the @main App.
+ */
 struct Main_App_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
