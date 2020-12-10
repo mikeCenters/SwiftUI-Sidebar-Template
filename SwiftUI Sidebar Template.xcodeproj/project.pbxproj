@@ -19,6 +19,8 @@
 		BA46FBF725803D9C0092B3D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46FBF625803D9C0092B3D6 /* SettingsView.swift */; };
 		BA46FC0225803E340092B3D6 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46FC0125803E340092B3D6 /* ContactUsView.swift */; };
 		BA60F4AB25825956003117FF /* AppScrollSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60F4AA25825955003117FF /* AppScrollSectionView.swift */; };
+		BA651C3825826AA900796B67 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA651C3725826AA900796B67 /* MailView.swift */; };
+		BA651C612582728300796B67 /* EmailRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA651C602582728300796B67 /* EmailRequiredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		BA46FBF625803D9C0092B3D6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BA46FC0125803E340092B3D6 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 		BA60F4AA25825955003117FF /* AppScrollSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScrollSectionView.swift; sourceTree = "<group>"; };
+		BA651C3725826AA900796B67 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		BA651C602582728300796B67 /* EmailRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRequiredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				BA46FC0125803E340092B3D6 /* ContactUsView.swift */,
+				BA651C3725826AA900796B67 /* MailView.swift */,
+				BA651C602582728300796B67 /* EmailRequiredView.swift */,
 			);
 			path = "Contact Us";
 			sourceTree = "<group>";
@@ -377,6 +383,8 @@
 				BA46FBCD257FD5B50092B3D6 /* AboutView.swift in Sources */,
 				BA46FC0225803E340092B3D6 /* ContactUsView.swift in Sources */,
 				BA60F4AB25825956003117FF /* AppScrollSectionView.swift in Sources */,
+				BA651C3825826AA900796B67 /* MailView.swift in Sources */,
+				BA651C612582728300796B67 /* EmailRequiredView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
