@@ -84,7 +84,7 @@ struct SidebarView: View {
                 }
             }
             .foregroundColor(.secondary)
-            .font(Font.title3.weight(.semibold))
+            .font(.headline)
             .padding(.bottom)
             
         }
