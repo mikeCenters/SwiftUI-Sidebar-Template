@@ -78,6 +78,10 @@ struct SidebarView: View {
                         Label("Settings", systemImage: "gear")
                     }
                     
+                    NavigationLink(destination: ProductsView()) {
+                        Label("Products", systemImage: "cart")
+                    }
+                    
                     NavigationLink(destination: ContactUsView()) {
                         Label("Contact Us", systemImage: "envelope")
                     }
