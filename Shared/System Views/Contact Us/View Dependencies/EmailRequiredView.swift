@@ -29,7 +29,7 @@ struct EmailRequiredView: View {
                 .font(Font.system(size: 125, weight: .semibold, design: .rounded))
                 .foregroundColor(.blue)
             
-            Text("To offer you in-app support, you will need to be able to send emails from your device. \n\nSetup the iOS mail app to get started.")
+            Text("To offer in-app support, you will need to be able to send emails from your device. \n\nSetup the iOS mail app to get started.")
                 .font(Font.title3.weight(.medium))
                 .multilineTextAlignment(.center)
             

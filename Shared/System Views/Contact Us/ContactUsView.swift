@@ -9,7 +9,6 @@ import SwiftUI
 import MessageUI
 
 struct ContactUsView: View {
-    
     @State private var emailRecipients: [String] = []
     @State private var emailSubject: String = ""
     
@@ -25,7 +24,7 @@ struct ContactUsView: View {
             Image(systemName: "person.fill.questionmark")
                 .font(.system(size: 125, weight: .medium))
                 .foregroundColor(.blue)
-                .padding(.leading, 35)  // Try to offset image
+                .padding(.leading, 125 / 4)  // Offset image based on font size.
             
             VStack(spacing: 20) {
                 AppScrollSectionView(titleText: "Need Help?",

@@ -202,8 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				BA46FC0125803E340092B3D6 /* ContactUsView.swift */,
-				BA651C3725826AA900796B67 /* MailView.swift */,
-				BA651C602582728300796B67 /* EmailRequiredView.swift */,
+				BA651C82258299F800796B67 /* View Dependencies */,
 			);
 			path = "Contact Us";
 			sourceTree = "<group>";
@@ -217,6 +216,15 @@
 				BA46FBF525803D910092B3D6 /* Settings */,
 			);
 			path = "System Views";
+			sourceTree = "<group>";
+		};
+		BA651C82258299F800796B67 /* View Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BA651C602582728300796B67 /* EmailRequiredView.swift */,
+				BA651C3725826AA900796B67 /* MailView.swift */,
+			);
+			path = "View Dependencies";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
