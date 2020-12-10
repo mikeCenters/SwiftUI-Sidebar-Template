@@ -20,44 +20,53 @@ struct ContactUsView: View {
     }
     
     var body: some View {
-        ScrollView {
-            Image(systemName: "person.fill.questionmark")
-                .font(.system(size: 125, weight: .medium))
-                .foregroundColor(.blue)
-                .padding(.leading, 125 / 4)  // Offset image based on font size.
-            
-            VStack(spacing: 20) {
-                AppScrollSectionView(titleText: "Need Help?",
-                                     bodyText: "Contact support for any issues regarding the use of this app.",
-                                     buttonText: "Contact Support",
-                                     action: {
-                                        self.emailRecipients = ["example@email.com"]
-                                        self.emailSubject = "Support: "
-                                        self.isShowingMailView.toggle()
-                                     }
-                )
+        VStack(spacing: 0) {
+            ScrollView {
+                /*
+                 Main Content
+                 */
+                Image(systemName: "person.fill.questionmark")
+                    .font(.system(size: 125, weight: .medium))
+                    .foregroundColor(.blue)
+                    .padding(.leading, 125 / 4)  // Offset image based on font size.
                 
-                AppScrollSectionView(titleText: "Feature Request",
-                                     bodyText: "Help drive the direction of this app by submitting a feature request.",
-                                     buttonText: "Request Feature",
-                                     action: {
-                                        self.emailRecipients = ["example@email.com"]
-                                        self.emailSubject = "Feature Request: "
-                                        self.isShowingMailView.toggle()
-                                     }
-                )
-                
-                AppScrollSectionView(titleText: "Feedback",
-                                     bodyText: "While this app is tested heavily prior to release, errors within any app are possible. Issue feedback for app errors you may have found.",
-                                     buttonText: "Issue Feedback",
-                                     action: {
-                                        self.emailRecipients = ["example@email.com"]
-                                        self.emailSubject = "Feedback: "
-                                        self.isShowingMailView.toggle()
-                                     }
-                )
+                VStack(spacing: 20) {
+                    AppScrollSectionView(titleText: "Need Help?",
+                                         bodyText: "Contact support for any issues regarding the use of this app.",
+                                         buttonText: "Contact Support",
+                                         action: {
+                                            self.emailRecipients = ["example@email.com"]
+                                            self.emailSubject = "Support: "
+                                            self.isShowingMailView.toggle()
+                                         }
+                    )
+                    
+                    AppScrollSectionView(titleText: "Feature Request",
+                                         bodyText: "Help drive the direction of this app by submitting a feature request.",
+                                         buttonText: "Request Feature",
+                                         action: {
+                                            self.emailRecipients = ["example@email.com"]
+                                            self.emailSubject = "Feature Request: "
+                                            self.isShowingMailView.toggle()
+                                         }
+                    )
+                    
+                    AppScrollSectionView(titleText: "Feedback",
+                                         bodyText: "While this app is tested heavily prior to release, errors within any app are possible. Issue feedback for app errors you may have found.",
+                                         buttonText: "Issue Feedback",
+                                         action: {
+                                            self.emailRecipients = ["example@email.com"]
+                                            self.emailSubject = "Feedback: "
+                                            self.isShowingMailView.toggle()
+                                         }
+                    )
+                }
             }
             
+            /*
+             Footer Content
+             */
+            AppInfoFooterView()
         }
         .navigationTitle("Contact Us")
         .sheet(isPresented: $isShowingMailView) {

@@ -8,21 +8,13 @@
 import SwiftUI
 
 struct AboutView: View {
-    private var appVersionText: String  {
-        guard let appVersionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-        else {
-            fatalError("App Version not found in bundle")
-        }
-        return appVersionString
-    }
-    
-    private var privacyPolicyURL = URL(string: "https://www.google.com")!
-    private var termsServiceURL = URL(string: "https://www.google.com")!
     
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
-                
+                /*
+                 Main Content
+                 */
                 VStack(spacing: 20) {
                     AppScrollSectionView(titleText: "Test Button Section",
                                          bodyText: "This is a test button view.\n\nAnything can be done with the button, just pass the function into the handler.",
@@ -45,29 +37,9 @@ struct AboutView: View {
             }
             
             /*
-             Footer
+             Footer Content
              */
-            VStack(spacing: 15) {
-                Divider()
-                VStack {
-                    HStack(spacing: 20) {
-                        Link(destination: self.privacyPolicyURL, label: {
-                            Text("Privacy Policy")
-                        })
-                        
-                        Divider()
-                        
-                        Link(destination: self.termsServiceURL, label: {
-                            Text("Terms of Service")
-                        })
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 25, alignment: .center)
-                    
-                    Text("App Version: \(self.appVersionText)")
-                }
-                .font(Font.caption.weight(.semibold))
-                .foregroundColor(.secondary)
-            }
+            AppInfoFooterView()
             
         }
         .navigationTitle("About")
