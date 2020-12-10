@@ -9,12 +9,12 @@ import SwiftUI
 import MessageUI
 
 struct ContactUsView: View {
+    
     @State private var emailRecipients: [String] = []
     @State private var emailSubject: String = ""
-    
+    @State var isShowingMailView: Bool = false
     
     @State private var result: Result<MFMailComposeResult, Error>? = nil
-    @State var isShowingMailView: Bool = false
     private var canSendEmails: Bool {
         return MFMailComposeViewController.canSendMail()
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppInfoFooterView: View {
+    
     private var appVersionText: String  {
         guard let appVersionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
         else {
