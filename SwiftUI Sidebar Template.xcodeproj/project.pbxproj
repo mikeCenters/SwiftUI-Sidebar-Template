@@ -18,6 +18,7 @@
 		BA46FBCD257FD5B50092B3D6 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46FBCC257FD5B50092B3D6 /* AboutView.swift */; };
 		BA46FBF725803D9C0092B3D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46FBF625803D9C0092B3D6 /* SettingsView.swift */; };
 		BA46FC0225803E340092B3D6 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA46FC0125803E340092B3D6 /* ContactUsView.swift */; };
+		BA60F4AB25825956003117FF /* AppScrollSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60F4AA25825955003117FF /* AppScrollSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		BA46FBCC257FD5B50092B3D6 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BA46FBF625803D9C0092B3D6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BA46FC0125803E340092B3D6 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
+		BA60F4AA25825955003117FF /* AppScrollSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScrollSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		BA46FC0725803F3F0092B3D6 /* System Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA60F4AA25825955003117FF /* AppScrollSectionView.swift */,
 				BA46FBCB257FD5AA0092B3D6 /* About */,
 				BA46FC0025803E1E0092B3D6 /* Contact Us */,
 				BA46FBF525803D910092B3D6 /* Settings */,
@@ -373,6 +376,7 @@
 				BA46FB81257E8F360092B3D6 /* SidebarView.swift in Sources */,
 				BA46FBCD257FD5B50092B3D6 /* AboutView.swift in Sources */,
 				BA46FC0225803E340092B3D6 /* ContactUsView.swift in Sources */,
+				BA60F4AB25825956003117FF /* AppScrollSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
